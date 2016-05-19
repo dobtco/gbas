@@ -3,10 +3,10 @@ class Views::Home::Index < Views::Layouts::Application
     div(class: 'home_sections') {
       section(class: 'home_section home_section_primary') {
         div(class: 'home_section_inner') {
-          img src: image_path('hhs_logo.png'), alt: 'HHS Logo', class: 'home_logo'
-          h1 'HHS GBAS'
-          p(class: 'home_tagline') {
-            text 'Inspirational tagline here'
+          img src: image_path('hhs_logo'), alt: 'HHS Logo', class: 'home_logo'
+          h1 {
+            strong 'HHS GBAS.'
+            text ' Finding talent to&nbsp;solve public health problems&nbsp;overseas.'.html_safe
           }
           p(class: 'home_get_reminded') {
             text 'Get reminded when applications open.'
@@ -59,7 +59,7 @@ class Views::Home::Index < Views::Layouts::Application
           ul(class: 'home_team grid') {
             team_members.each do |member|
               li(class: 'item') {
-                img src: '//placehold.it/250x250' #image_path("team/#{k.parameterize.underscore}.jpg")
+                img src: '//placehold.it/250x250', alt: "Photo of #{member[:name]}" #image_path("team/#{k.parameterize.underscore}.jpg")
                 span member[:name], class: 'home_team_name'
                 span member[:position], class: 'home_team_position'
               }
@@ -68,25 +68,78 @@ class Views::Home::Index < Views::Layouts::Application
 
           h3 'Contributing Partners'
 
-          ul(class: 'formatted_list') {
-            li 'Marilyn Duffoo CDC/HRO (Communication Lead)'
-            li 'Paris Bannourah HHS/ASA/OHR (Assessment Lead)'
-            li 'Janice Hiland HHS/OGA Contractor (Assignment Panel Lead)'
-            li 'Tracy Hilliard CDC/HRO (Assessment Team)'
-            li 'Jackie Smith, HHS/ASA/OHR (Assessment Team)'
-            li 'Nicole Cundy CDC/HRO (Bidding and Assignment and IT Lead)'
-            li 'Christine Jolley CDC/CGH (Information Session Lead)'
-            li 'Semico Parson CDC/HRO (Admin Support)'
-            li 'Victor Balaban CDC/CGH (Evaluation Lead)'
-            li 'Winnie Mitchell SAMHSA/ (SAMHSA Lead)'
-            li 'Robbin Ruffner CDC/HRO (Admin Support)'
-            li 'Jacob Olivo OS/OGA (Position Registration Lead)'
-            li 'Ricky KingChing FDA/OC (FDA HR Liaison)'
-            li 'CAPT Abnnah Forbes CDC/HRO (Commissioned Corps Consultant)'
-            li 'Randi Bretous FDA/OC (FDA HR Liaison)'
-            li 'Jack Spencer CDC/CGH (Staff Advocate and Cadre Liaison)'
-            li 'Christopher Stallard CDC/CGH (Staff Advocate)'
-            li 'HR, Security, and Medical Teams from CDC, FDA, HRSA, NIH, CMS'
+          ul(class: 'team_partners grid') {
+            li(class: 'item') {
+              strong 'Marilyn Duffoo'
+              span ' CDC/HRO (Communication Lead)'
+            }
+            li(class: 'item') {
+              strong 'Paris Bannourah'
+              span 'HHS/ASA/OHR (Assessment Lead)'
+            }
+            li(class: 'item') {
+              strong 'Janice Hiland'
+              span 'HHS/OGA Contractor (Assignment Panel Lead)'
+            }
+            li(class: 'item') {
+              strong 'Tracy Hilliard'
+              span 'CDC/HRO (Assessment Team)'
+            }
+            li(class: 'item') {
+              strong 'Jackie Smith'
+              span 'HHS/ASA/OHR (Assessment Team)'
+            }
+            li(class: 'item') {
+              strong 'Nicole Cundy'
+              span 'CDC/HRO (Bidding and Assignment and IT Lead)'
+            }
+            li(class: 'item') {
+              strong 'Christine Jolley'
+              span 'CDC/CGH (Information Session Lead)'
+            }
+            li(class: 'item') {
+              strong 'Semico Parson'
+              span 'CDC/HRO (Admin Support)'
+            }
+            li(class: 'item') {
+              strong 'Victor Balaban'
+              span 'CDC/CGH (Evaluation Lead)'
+            }
+            li(class: 'item') {
+              strong 'Winnie Mitchell'
+              span 'SAMHSA (SAMHSA Lead)'
+            }
+            li(class: 'item') {
+              strong 'Robbin Ruffner'
+              span 'CDC/HRO (Admin Support)'
+            }
+            li(class: 'item') {
+              strong 'Jacob Olivo'
+              span 'OS/OGA (Position Registration Lead)'
+            }
+            li(class: 'item') {
+              strong 'Ricky KingChing'
+              span 'FDA/OC (FDA HR Liaison)'
+            }
+            li(class: 'item') {
+              strong 'CAPT Abnnah Forbes'
+              span 'CDC/HRO (Commissioned Corps Consultant)'
+            }
+            li(class: 'item') {
+              strong 'Randi Bretous'
+              span 'FDA/OC (FDA HR Liaison)'
+            }
+            li(class: 'item') {
+              strong 'Jack Spencer'
+              span 'CDC/CGH (Staff Advocate and Cadre Liaison)'
+            }
+            li(class: 'item') {
+              strong 'Christopher Stallard'
+              span 'CDC/CGH (Staff Advocate)'
+            }
+            li(class: 'item') {
+              strong 'HR, Security, and Medical Teams from CDC, FDA, HRSA, NIH, CMS'
+            }
           }
         }
       }
@@ -95,7 +148,7 @@ class Views::Home::Index < Views::Layouts::Application
 
   def team_members
     [
-      { name: 'Matthew Brown', position: 'Project Lead, OGA Program Liaison' },
+      { name: 'Matthew Brown', position: 'Project Lead <br/>OGA Program Liaison'.html_safe },
       { name: 'Raymona Ramsey', position: 'HR Lead' },
       { name: 'Suzanne Theroux', position: ' CDC Program Lead' },
       { name: 'Tina Harrison', position: 'FDA Program Lead' },

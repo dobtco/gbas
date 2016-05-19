@@ -1,12 +1,41 @@
 @import 'includes';
 
+h1, h2, h3, h4, h5 {
+  @media screen and (max-width: $lapWidth) {
+    text-align: center;
+  }
+}
+
 .home_section {
   padding: 2.5rem 0;
-  border-bottom: 2px solid $gray;
+  .button {
+    @include button_color($primaryColor,$bodyFontColor);
+  }
+  input {
+    border-color: transparent;
+    color: $bodyFontColor;
+    &:focus,
+    &:hover {
+      border-color: darken($primaryColorDark,10%);
+    }
+    &:focus {
+      box-shadow: inset 0 1px 3px rgba(#000,0.3);
+    }
+  }
+  &:nth-child(odd) {
+    background-color: $primaryColorDark;
+    color: $primaryColor;
+    h1, h2, h3, h4, h5, strong {
+      color: $primaryColor;
+    }
+    a {
+      color: $primaryColor;
+      text-decoration: underline;
+    }
+  }
 
-  &:nth-child(1),
-  &:nth-child(3) {
-    background: $lighterGray;
+  h1 {
+    font-weight: $weightNormal;
   }
 
   h2 {
@@ -27,7 +56,12 @@
 
 .home_logo {
   width: 4rem;
-  margin-bottom: $rhythm * 2;
+  margin: 0 auto $rhythm * 2;
+  display: block;
+  @media screen and (min-width: $lapWidth) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .home_section_inner {
@@ -37,7 +71,7 @@
 }
 
 .home_tagline {
-  @include fontH2;
+  font-size: 3rem;
 }
 
 .home_get_reminded {
@@ -62,9 +96,27 @@
   }
 }
 
-// More padding on the bottom, since <h1> has a large line height
 .home_section_primary {
-  padding-bottom: 3.5rem;
+  padding: ($lineHeight * 3) 0;
+  background: asset-url('header.jpg') top center no-repeat;
+  background-size: cover;
+  position: relative;
+  text-shadow: 0 1px 4px rgba(#000,0.3);
+  &:before {
+    position: absolute;
+    content: '';
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($primaryColorDark,0.85);
+    background: linear-gradient(rgba($primaryColorDark,0.75),$primaryColorDark);
+  }
+  .home_section_inner {
+    position: relative;
+    z-index: 3;
+  }
 }
 
 .home_team {
@@ -73,17 +125,20 @@
 
   .item {
     padding-left: 2rem;
-
+    margin-bottom: $lineHeight;
     @media screen and (min-width: $lapWidth) {
-      width: 20%;
+      width: 33.3333%;
+      margin-bottom: $rhythm * 5;
     }
-
+    @media screen and (min-width: $deskWidth) {
+      width: 25%;
+    }
     text-align: center;
   }
 
   img {
     border-radius: 50%;
-    margin-bottom: $rhythm;
+    margin-bottom: $rhythm * 2;
   }
 }
 
@@ -94,4 +149,27 @@
 
 .home_team_name {
   font-weight: $weightBold;
+}
+
+.team_partners {
+  li {
+    margin-bottom: $rhythm * 2;
+    text-align: center;
+    @media screen and (min-width: $lapWidth) {
+      text-align: left;
+      width: 33.333333%;
+      margin-bottom: $rhythm * 5;
+    }
+    @media screen and (min-width: $deskWidth) {
+      width: 25%;
+    }
+  }
+  strong {
+    font-weight: $weightNormal;
+  }
+  span {
+    display: block;
+    font-size: $fontSmall;
+    opacity: 0.8;
+  }
 }
