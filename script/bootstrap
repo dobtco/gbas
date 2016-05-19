@@ -1,0 +1,8 @@
+#! /bin/bash
+
+bundle install
+rake db:setup
+rake db:seed:example
+
+printf "\n\nSuccess! You should be good to go, just open up \
+https://gbas.dev/sign_in in your browser.\n\n"
