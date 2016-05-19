@@ -13,16 +13,17 @@ h1, h2, h3, h4, h5 {
   }
   input {
     border-color: transparent;
+    color: $bodyFontColor;
     &:focus,
     &:hover {
-      border-color: darken($bodyFontColor,10%);
+      border-color: darken($primaryColorDark,10%);
     }
     &:focus {
       box-shadow: inset 0 1px 3px rgba(#000,0.3);
     }
   }
   &:nth-child(odd) {
-    background-color: $bodyFontColor;
+    background-color: $primaryColorDark;
     color: $primaryColor;
     h1, h2, h3, h4, h5, strong {
       color: $primaryColor;
@@ -100,6 +101,7 @@ h1, h2, h3, h4, h5 {
   background: asset-url('header.jpg') top center no-repeat;
   background-size: cover;
   position: relative;
+  text-shadow: 0 1px 4px rgba(#000,0.3);
   &:before {
     position: absolute;
     content: '';
@@ -108,8 +110,8 @@ h1, h2, h3, h4, h5 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba($bodyFontColor,0.85);
-    background: linear-gradient(rgba($bodyFontColor,0.75),$bodyFontColor);
+    background: rgba($primaryColorDark,0.85);
+    background: linear-gradient(rgba($primaryColorDark,0.75),$primaryColorDark);
   }
   .home_section_inner {
     position: relative;

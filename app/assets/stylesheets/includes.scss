@@ -6,7 +6,8 @@ $fontFamilyDefault: 'Vollkorn', 'Georgia', 'Times New Roman', serif;
 $weightBold: 700;
 
 $primaryColor: #ebf2f7;
-$bodyFontColor: #143857;
+$primaryColorDark: #143857;
+$bodyFontColor: $primaryColorDark;
 
 h1, h2, h3, h4, h5, body, strong {
   color: $bodyFontColor;
