@@ -19,10 +19,10 @@ deployment:
     branch: master
     commands:
       - curl -X POST -d "" https://hooks.cloud66.com/stacks/redeploy/ac1a60cedca2f1f4e1c44e67d125d6d9/8a5da72231931fc3a4801e497acc22be
-#   production:
-#     branch: production
-#     commands:
-#       - curl -X POST -d "" https://hooks.cloud66.com/stacks/redeploy/xxx/xxx
+  production:
+    branch: production
+    commands:
+      - curl -X POST -d "" https://hooks.cloud66.com/stacks/redeploy/ac1a60cedca2f1f4e1c44e67d125d6d9/fcadb4d3a33b131ce002164cd6f37386
 
 database:
   override:
