@@ -3,7 +3,7 @@ class Views::Home::Index < Views::Layouts::Application
     div(class: 'home_sections') {
       section(class: 'home_section home_section_primary') {
         div(class: 'home_section_inner') {
-          img src: image_path('hhs_logo'), alt: 'HHS Logo', class: 'home_logo'
+          img src: image_path('hhs_logo.png'), alt: 'HHS Logo', class: 'home_logo'
           h1 'HHS GBAS'
           p(class: 'home_tagline') {
             text 'Inspirational tagline here'
