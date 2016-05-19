@@ -28,7 +28,7 @@ class Views::Layouts::Application < Views::Base
   def content
     rawtext "<!doctype html>"
 
-    html {
+    html(lang: 'en') {
       head {
         title calculated_page_title
         stylesheets

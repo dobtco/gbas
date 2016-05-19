@@ -59,7 +59,7 @@ class Views::Home::Index < Views::Layouts::Application
           ul(class: 'home_team grid') {
             team_members.each do |member|
               li(class: 'item') {
-                img src: '//placehold.it/250x250' #image_path("team/#{k.parameterize.underscore}.jpg")
+                img src: '//placehold.it/250x250', alt: "Photo of #{member[:name]}" #image_path("team/#{k.parameterize.underscore}.jpg")
                 span member[:name], class: 'home_team_name'
                 span member[:position], class: 'home_team_position'
               }
