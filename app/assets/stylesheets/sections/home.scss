@@ -55,7 +55,12 @@ h1, h2, h3, h4, h5 {
 
 .home_logo {
   width: 4rem;
-  margin-bottom: $rhythm * 2;
+  margin: 0 auto $rhythm * 2;
+  display: block;
+  @media screen and (min-width: $lapWidth) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .home_section_inner {
