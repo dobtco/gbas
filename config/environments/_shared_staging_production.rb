@@ -39,4 +39,4 @@ Rails.application.configure do
   )
 end
 
-require_relative '_smtp_env_vars'
+# require_relative '_smtp_env_vars'
