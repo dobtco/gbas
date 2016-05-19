@@ -1,6 +1,33 @@
 @import 'dvl/core/includes';
 
-// dvl-core overrides
-$navBackground: #434a54;
-$navText: #fff;
-$primaryColor: #434a54;
+$fontFamilyDisplay: 'Vollkorn', 'Georgia', 'Times New Roman', serif;
+$fontFamilyDefault: 'Vollkorn', 'Georgia', 'Times New Roman', serif;
+
+$weightBold: 700;
+
+$primaryColor: #ebf2f7;
+$bodyFontColor: #143857;
+
+h1, h2, h3, h4, h5, body, strong {
+  color: $bodyFontColor;
+}
+
+body {
+  @include font_smoothing;
+  background: $primaryColor;
+}
+
+@mixin fontDisplay {
+  font-family: $fontFamilyDisplay;
+  font-weight: $weightBold;
+}
+
+h1, h2, h3 {
+  @include fontDisplay;
+}
+
+@media screen and (min-width: $lapWidth) {
+  h1 {
+    line-height: $rhythm * 9;
+  }
+}

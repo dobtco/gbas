@@ -7,16 +7,12 @@ class Views::Layouts::Application < Views::Base
     script(src: '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js') unless Rails.env.test?
     script %Q{window.jQuery || document.write('<script src="/non_digest_assets/jquery.js"><\\/script>')}.html_safe
 
-    unless Rails.env.test?
-      script src: "//use.typekit.net/vur8cqi.js"
-      script "try{Typekit.load();}catch(e){}".html_safe
-    end
-
     javascript_include_tag 'application', crossorigin: 'anonymous'
   end
 
   def stylesheets
     stylesheet_link_tag 'application', media: 'all'
+    link href: 'https://fonts.googleapis.com/css?family=Vollkorn:700,400', rel: 'stylesheet'
     link rel: 'icon', type: 'image/png', href: '/apple-touch-icon-precomposed.png'
   end
 
