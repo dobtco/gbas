@@ -6,7 +6,7 @@ class Views::Home::Index < Views::Layouts::Application
           img src: image_path('hhs_logo.png'), alt: 'HHS Logo', class: 'home_logo'
           h1 'HHS GBAS'
           p(class: 'home_tagline') {
-            text 'Inspirational tagline here'
+            text 'Finding talent to solve public health problems overseas'
           }
           p(class: 'home_get_reminded') {
             text 'Get reminded when applications open.'
