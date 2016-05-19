@@ -1,6 +1,6 @@
 Rails.application.configure do
   config.x.ssl = true
-  config.x.base_domain = 'xxx'
+  config.x.base_domain = 'staging.hhs-gbas.org'
   config.x.program_name = 'gbas-staging'
 end
 
