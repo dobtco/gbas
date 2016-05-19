@@ -1,0 +1,97 @@
+@import 'includes';
+
+.home_section {
+  padding: 2.5rem 0;
+  border-bottom: 2px solid $gray;
+
+  &:nth-child(1),
+  &:nth-child(3) {
+    background: $lighterGray;
+  }
+
+  h2 {
+    @include fontH1;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.home_section_text {
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75;
+  }
+}
+
+.home_logo {
+  width: 4rem;
+  margin-bottom: $rhythm * 2;
+}
+
+.home_section_inner {
+  width: 90%;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.home_tagline {
+  @include fontH2;
+}
+
+.home_get_reminded {
+  @include fontH3;
+}
+
+// Smaller gutter
+.home_subscribe_form {
+  .grid {
+    margin-left: -1rem;
+  }
+
+  .item {
+    padding-left: 1rem;
+    margin-bottom: $rhythm;
+  }
+
+  // https://github.com/dobtco/dvl-core/issues/266
+  .button {
+    height: 3.5rem;
+    line-height: 3.5rem;
+  }
+}
+
+// More padding on the bottom, since <h1> has a large line height
+.home_section_primary {
+  padding-bottom: 3.5rem;
+}
+
+.home_team {
+  margin-left: -2rem;
+  margin-bottom: $lineHeight * 2;
+
+  .item {
+    padding-left: 2rem;
+
+    @media screen and (min-width: $lapWidth) {
+      width: 20%;
+    }
+
+    text-align: center;
+  }
+
+  img {
+    border-radius: 50%;
+    margin-bottom: $rhythm;
+  }
+}
+
+.home_team_name,
+.home_team_position {
+  display: block;
+}
+
+.home_team_name {
+  font-weight: $weightBold;
+}

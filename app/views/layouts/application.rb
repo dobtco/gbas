@@ -8,7 +8,7 @@ class Views::Layouts::Application < Views::Base
     script %Q{window.jQuery || document.write('<script src="/non_digest_assets/jquery.js"><\\/script>')}.html_safe
 
     unless Rails.env.test?
-      script src: "//use.typekit.net/ckb1dps.js"
+      script src: "//use.typekit.net/vur8cqi.js"
       script "try{Typekit.load();}catch(e){}".html_safe
     end
 
