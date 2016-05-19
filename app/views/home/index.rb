@@ -17,7 +17,7 @@ class Views::Home::Index < Views::Layouts::Application
                 input type: 'email', placeholder: 'Enter your email address', class: 'large'
               }
               div(class: 'item lap_four_columns') {
-                button 'Remind me', class: 'button info large block'
+                button 'Remind me', class: 'button info large block', 'data-loading-text' => 'Submitting…'
               }
             }
           }
