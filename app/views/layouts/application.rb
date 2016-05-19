@@ -12,7 +12,11 @@ class Views::Layouts::Application < Views::Base
 
   def stylesheets
     stylesheet_link_tag 'application', media: 'all'
-    link href: 'https://fonts.googleapis.com/css?family=Vollkorn:700,400', rel: 'stylesheet'
+
+    unless Rails.env.test?
+      link href: 'https://fonts.googleapis.com/css?family=Vollkorn:700,400', rel: 'stylesheet'
+    end
+
     link rel: 'icon', type: 'image/png', href: '/apple-touch-icon-precomposed.png'
   end
 
