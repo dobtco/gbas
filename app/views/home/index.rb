@@ -22,7 +22,8 @@ class Views::Home::Index < Views::Layouts::Application
             }
           }
           div(class: 'home_alt_trigger') {
-            a 'Are you an HHS program lead? Sign up for GBAS here.'
+            a 'Are you an HHS program lead? Sign up for GBAS here.',
+              href: 'https://hhs-gbas.forms.fm/program-signup'
           }
         }
       }
