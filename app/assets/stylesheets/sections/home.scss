@@ -41,10 +41,6 @@ h1, h2, h3, h4, h5 {
   h2 {
     @include fontH1;
   }
-
-  &:last-child {
-    border-bottom: 0;
-  }
 }
 
 .home_section_text {
