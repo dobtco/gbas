@@ -20,4 +20,96 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  home:
+    team:
+      - name: Matthew Brown
+        position: Project Lead <br/>OGA Program Liaison
+      - name: Raymona Ramsey
+        position: HR Lead
+      - name: Suzanne Theroux
+        position:  CDC Program Lead
+      - name: Tina Harrison
+        position: FDA Program Lead
+      - name: Raymond Goldstein
+        position: HRSA Lead
+    partners:
+      - name: Marilyn Duffoo
+        position: CDC/HRO (Communication Lead)
+
+      - name: Paris Bannourah
+        position: HHS/ASA/OHR (Assessment Lead)
+      - name: Janice Hiland
+        position: HHS/OGA Contractor (Assignment Panel Lead)
+      - name: Tracy Hilliard
+        position: CDC/HRO (Assessment Team)
+      - name: Jackie Smith
+        position: HHS/ASA/OHR (Assessment Team)
+      - name: Nicole Cundy
+        position: CDC/HRO (Bidding and Assignment and IT Lead)
+      - name: Christine Jolley
+        position: CDC/CGH (Information Session Lead)
+      - name: Semico Parson
+        position: CDC/HRO (Admin Support)
+      - name: Victor Balaban
+        position: CDC/CGH (Evaluation Lead)
+      - name: Winnie Mitchell
+        position: SAMHSA (SAMHSA Lead)
+      - name: Robbin Ruffner
+        position: CDC/HRO (Admin Support)
+      - name: Jacob Olivo
+        position: OS/OGA (Position Registration Lead)
+      - name: Ricky KingChing
+        position: FDA/OC (FDA HR Liaison)
+      - name: CAPT Abnnah Forbes
+        position: CDC/HRO (Commissioned Corps Consultant)
+      - name: Randi Bretous
+        position: FDA/OC (FDA HR Liaison)
+      - name: Jack Spencer
+        position: CDC/CGH (Staff Advocate and Cadre Liaison)
+      - name: Christopher Stallard
+        position: CDC/CGH (Staff Advocate)
+      - name: HR, Security, and Medical Teams from CDC, FDA, HRSA, NIH, CMS
+    title_html: |-
+      <strong>HHS Global Bidding & Assignment System.</strong><br />
+      Finding talent to&nbsp;solve public health problems&nbsp;overseas.
+    get_reminded: Get reminded when applications open.
+    hhs_program_lead_html: |-
+      <a href='https://hhs-gbas.forms.fm/program-signup'>Are you an HHS program lead? Sign up for GBAS here.</a>
+    innovation:
+      title: The Innovation
+      content_html: |-
+        GBAS 2.0 expects to launch by September 2016 and include external applicants
+        and promotions for federal staff. The team is working to secure HHS-wide
+        integrated IT tools to manage the process from hiring through deployment,
+        including:  tracking applications, scheduling and implementing competency-based
+        assessments, global program position registration, front-loading medical
+        and security clearances, and bidding for, and paneling of, position assignments.
+        These integrated tools should synchronize processes with USAStaffing,
+        including training materials for users.
+    project_plan:
+      title: Project Plan & Scope
+      content_html: |-
+        GBAS will strengthen HHS’s capacity to meet expanding public health security,
+        protection, product safety, and research mandates, by reducing the frequency
+        and duration of vacancies, gaining efficiencies through batching applications,
+        assessments, bidding, selection, clearances, and training for international
+        assignments across HHS, while building a pool of vetted staff ready to accept
+        positions when vacancies arise.
+    questions:
+      title: Questions?
+      content_html: |-
+        If you have questions, you can contact the GBAS team at
+        <a href='mailto:staffingaccelerator@hhs.gov'>staffingaccelerator@hhs.gov</a>.
+    what:
+      title: What is GBAS?
+      content_html: |-
+        <strong>Global Bidding & Assignment System (GBAS):</strong>
+        The current system to recruit, maintain, and deploy a specialized global
+        public health workforce is not flexible enough to meet the expanding global
+        mandates of the Department of Health and Human Services (HHS). The Global
+        Bidding and Assignment System (GBAS), a specialized system for global recruitment,
+        assessment, bidding, training, and assignment, has shown early promise during its pilot.
+        GBAS is filling overseas global public health vacancies, developing a pool of
+        qualified and cleared staff ready for deployment, providing additional staffing
+        options for programs, while building a unifying workforce strategy across the
+        Department.  The project is a joint effort of pooled resources from across the Department.
