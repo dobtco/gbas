@@ -50,6 +50,13 @@ class Views::Home::Index < Views::Layouts::Application
           p %{
             GBAS will strengthen HHS’s capacity to meet expanding public health security, protection, product safety, and research mandates, by reducing the frequency and duration of vacancies, gaining efficiencies through batching applications, assessments, bidding, selection, clearances, and training for international assignments across HHS, while building a pool of vetted staff ready to accept positions when vacancies arise.
           }
+
+          h3 'Questions?'
+
+          p %{
+            If you have questions, you can contact the GBAS team at
+            <a href='mailto:staffingaccelerator@hhs.gov'>staffingaccelerator@hhs.gov</a>.
+          }.squish.html_safe
         }
       }
 
