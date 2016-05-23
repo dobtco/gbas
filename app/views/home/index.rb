@@ -5,7 +5,8 @@ class Views::Home::Index < Views::Layouts::Application
         div(class: 'home_section_inner') {
           img src: image_path('hhs_logo.png'), alt: 'HHS Logo', class: 'home_logo'
           h1 {
-            strong 'HHS GBAS.'
+            strong 'HHS Global Bidding & Assignment System.'
+            br
             text ' Finding talent to&nbsp;solve public health problems&nbsp;overseas.'.html_safe
           }
           p(class: 'home_get_reminded') {
