@@ -34,36 +34,36 @@ class Views::Home::Index < Views::Layouts::Application
 
           h3 t('home.project_plan.title')
           p t('home.project_plan.content_html')
-
-          h3 t('home.questions.title')
-          p t('home.questions.content_html')
         }
       }
 
       section(class: 'home_section home_section_text') {
         div(class: 'home_section_inner') {
-          h2 'The Team'
+          h2 t('home.questions.title')
+          p t('home.questions.content_html')
 
-          ul(class: 'home_team grid') {
-            t('home.team').each do |member|
-              li(class: 'item') {
-                img src: '//placehold.it/250x250', alt: "Photo of #{member[:name]}" #image_path("team/#{k.parameterize.underscore}.jpg")
-                span member[:name], class: 'home_team_name'
-                span member[:position].html_safe, class: 'home_team_position'
-              }
-            end
-          }
+          # h2 'The Team'
 
-          h3 'Contributing Partners'
+          # ul(class: 'home_team grid') {
+          #   t('home.team').each do |member|
+          #     li(class: 'item') {
+          #       img src: '//placehold.it/250x250', alt: "Photo of #{member[:name]}" #image_path("team/#{k.parameterize.underscore}.jpg")
+          #       span member[:name], class: 'home_team_name'
+          #       span member[:position].html_safe, class: 'home_team_position'
+          #     }
+          #   end
+          # }
 
-          ul(class: 'team_partners grid') {
-            t('home.partners').each do |partner|
-              li(class: 'item') {
-                strong partner[:name]
-                span partner[:position]
-              }
-            end
-          }
+          # h3 'Contributing Partners'
+
+          # ul(class: 'team_partners grid') {
+          #   t('home.partners').each do |partner|
+          #     li(class: 'item') {
+          #       strong partner[:name]
+          #       span partner[:position]
+          #     }
+          #   end
+          # }
 
           div(class: 'partner_logos grid') {
             %w(cdc hrsa nih samhsa).each do |x|
