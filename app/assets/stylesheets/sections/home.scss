@@ -169,3 +169,21 @@ h1, h2, h3, h4, h5 {
     opacity: 0.8;
   }
 }
+
+.partner_logos {
+  li {
+    display: block;
+    vertical-align: middle;
+    max-width: 10rem;
+    margin: $lineHeight * 2 auto;
+  }
+}
+
+@media screen and (min-width: $lapWidth) {
+  .partner_logos {
+    li {
+      max-width: none;
+      display: inline-block;
+    }
+  }
+}

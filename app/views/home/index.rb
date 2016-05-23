@@ -3,7 +3,7 @@ class Views::Home::Index < Views::Layouts::Application
     div(class: 'home_sections') {
       section(class: 'home_section home_section_primary') {
         div(class: 'home_section_inner') {
-          img src: image_path('hhs_logo.png'), alt: 'HHS Logo', class: 'home_logo'
+          img src: image_path('logos/hhs.png'), alt: 'HHS Logo', class: 'home_logo'
           h1 {
             strong 'HHS Global Bidding & Assignment System.'
             br
@@ -141,6 +141,14 @@ class Views::Home::Index < Views::Layouts::Application
             li(class: 'item') {
               strong 'HR, Security, and Medical Teams from CDC, FDA, HRSA, NIH, CMS'
             }
+          }
+
+          div(class: 'partner_logos grid') {
+            %w(cdc hrsa nih samhsa).each do |x|
+              li(class: 'item lap_three_columns') {
+                img src: asset_path("logos/#{x}.png"), alt: "Logo for #{x.upcase}"
+              }
+            end
           }
         }
       }
