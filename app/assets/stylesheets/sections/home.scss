@@ -184,6 +184,8 @@ h1, h2, h3, h4, h5 {
     li {
       max-width: none;
       display: inline-block;
+      margin-top: $lineHeight;
+      margin-bottom: $lineHeight;
     }
   }
 }
