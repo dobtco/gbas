@@ -66,7 +66,7 @@ class Views::Home::Index < Views::Layouts::Application
           # }
 
           div(class: 'partner_logos grid') {
-            %w(cdc hrsa nih samhsa).each do |x|
+            %w(cdc hrsa nih samhsa fda).each do |x|
               li(class: 'item lap_three_columns') {
                 img src: asset_path("logos/#{x}.png"), alt: "Logo for #{x.upcase}"
               }
