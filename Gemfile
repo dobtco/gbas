@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails'
+gem 'rails', '4.2.7.1'
 
 gem 'bugsnag'
 gem 'coffee-rails'
