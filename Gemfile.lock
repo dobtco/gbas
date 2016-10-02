@@ -267,7 +267,8 @@ GEM
       rails (>= 4.0)
       simple_form (>= 3.0)
     slop (3.6.0)
-    spring (1.7.2)
+    spring (2.0.0)
+      activesupport (>= 4.2)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
     sprockets (3.7.0)
@@ -339,4 +340,4 @@ DEPENDENCIES
   utf8-cleaner
 
 BUNDLED WITH
-   1.13.1
+   1.13.2
